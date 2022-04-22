@@ -9,8 +9,78 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    html,body
+{
+    /* added this snippet of code as a solution to white gap appearing on the very right side of screen */
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+</style>
 </head>
 <body>
+
+    <!-- My custom made nav bar, but not yet sure how to write it from scratch with boostrap, so below used premade from the example -->
+    <!-- <nav class="navbar navbar-dark bg-dark">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">Pizza</li>
+            <li><a href="#">Page 1</a></li>
+            <li class="nav-item">Career</li>
+            <li class="nav-item">Promo</li>
+            <li class="nav-item">Constacts</li>
+            <li class="nav-item">Test1</li>
+            <li class="nav-item">Test2</li>
+        </ul>
+    </nav> -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pizza website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Pizza <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Constacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Test1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Test2</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    
+      <div>
+          <h2 class="mt-5 text-center">Pizza</h2>
+          <!-- used "mx-auto" to align items horizontally -->
+          <div id="pizza-menu1" class="row ">
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" >
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" >
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" >
+            </div>
+            <div id="pizza-menu2" class="row mt-5 mb-5">
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" width="20%">
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" width="20%">
+            <img class="col-3 d-flex justify-content-center mx-auto" src="img/pizza-bazilica.jpeg" alt="pizza basilica" width="20%">
+            </div>
+      </div>
+
     <table class="table table-dark table-striped table-hover">
         <tr>
             <th>ID</th>

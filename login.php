@@ -19,7 +19,7 @@ include_once 'header.php';
                 <a class="nav-link" href="#">Promo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Constacts</a>
+                <a class="nav-link" href="#">Contacts</a>
             </li>
         </ul>
         <ul class="navbar-nav">
@@ -33,7 +33,7 @@ include_once 'header.php';
 
     </div>
 </nav>
-<<div class="container mb-5">
+<div class="container mb-5">
     <form>
         <h2 class="text-center mt-5 mb-5">Login</h2>
         <!-- Email input -->
@@ -52,28 +52,11 @@ include_once 'header.php';
         <!-- Submit button -->
         <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
 
-    
+
     </form>
     </div>
 
 
-    <table class="table table-dark table-striped table-hover">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Last name</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <th>Alfred</th>
-            <th>Alonzo</th>
-        </tr>
-        <tr>
-            <th>2</th>
-            <th>Karol</th>
-            <th>Marengo</th>
-        </tr>
-    </table>
 
 
 

@@ -19,7 +19,7 @@ include_once 'header.php';
                 <a class="nav-link" href="#">Promo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Constacts</a>
+                <a class="nav-link" href="#">Contacts</a>
             </li>
         </ul>
         <ul class="navbar-nav">
@@ -38,64 +38,47 @@ include_once 'header.php';
 
     <!-- Pills content -->
     <div class="tab-content">
-            <form>
-                <h2 class="text-center mt-5 mb-5">Register</h2>
-                <!-- Name input -->
-                <div class="form-outline mb-4">
-                    <input type="text" id="registerName" class="form-control" />
-                    <label class="form-label" for="registerName">Name</label>
-                </div>
+        <form>
+            <h2 class="text-center mt-5 mb-5">Register</h2>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="registerName" class="form-control" />
+                <label class="form-label" for="registerName">Name</label>
+            </div>
 
-                <!-- Username input -->
-                <div class="form-outline mb-4">
-                    <input type="text" id="registerUsername" class="form-control" />
-                    <label class="form-label" for="registerUsername">Username</label>
-                </div>
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="registerUsername" class="form-control" />
+                <label class="form-label" for="registerUsername">Username</label>
+            </div>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                    <input type="email" id="registerEmail" class="form-control" />
-                    <label class="form-label" for="registerEmail">Email</label>
-                </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="registerEmail" class="form-control" />
+                <label class="form-label" for="registerEmail">Email</label>
+            </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="registerPassword" class="form-control" />
-                    <label class="form-label" for="registerPassword">Password</label>
-                </div>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control" />
+                <label class="form-label" for="registerPassword">Password</label>
+            </div>
 
-                <!-- Repeat Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="registerRepeatPassword" class="form-control" />
-                    <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-                </div>
+            <!-- Repeat Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerRepeatPassword" class="form-control" />
+                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+            </div>
 
 
 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
-            </form>
-        </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+        </form>
+    </div>
 
 </div>
 
-<table class="table table-dark table-striped table-hover">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Last name</th>
-    </tr>
-    <tr>
-        <th>1</th>
-        <th>Alfred</th>
-        <th>Alonzo</th>
-    </tr>
-    <tr>
-        <th>2</th>
-        <th>Karol</th>
-        <th>Marengo</th>
-    </tr>
-</table>
 
 
 

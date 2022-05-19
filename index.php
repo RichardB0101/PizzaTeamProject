@@ -19,7 +19,7 @@ include_once 'header.php';
         <a class="nav-link" href="#">Promo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Constacts</a>
+        <a class="nav-link" href="#">Contacts</a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -68,8 +68,6 @@ include_once 'header.php';
     <th>Marengo</th>
   </tr>
 </table>
-
-
 
 <?php
 include_once 'footer.php';

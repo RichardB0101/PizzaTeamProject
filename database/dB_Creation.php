@@ -45,16 +45,15 @@ if (mysqli_query($conn_full, $sqlo)) {
   echo "Error in sql: " . mysqli_error($conn);
 }
 
+$guestname = $_POST["username"];
+$guestpassword =  $_POST["password"];
 
 //Inserting data
+ 
 $sql_insert = "INSERT INTO users(name, password)
 VALUES
-('Garry', 'larom14'),
-('Grami', '5421'),
-('Guru', '5432'),
-('Alfred', 'rrar')
+('$guestname', '$guestpassword')
 ";
-
 
 
 // Checking if inserted sucesfully 
@@ -64,5 +63,12 @@ if (mysqli_query($conn_full, $sql_insert)) {
   echo "Error in sql: " . mysqli_error($conn);
 }
 
+ //$sql_test = "TRUNCATE TABLE users;";
+// mysqli_query($conn_full, $sql_test);
+
 
 mysqli_close($conn);
+
+
+
+

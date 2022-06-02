@@ -33,7 +33,7 @@ if (mysqli_query($conn, $sql)) {
 $conn_full = mysqli_connect($servername, $username, $password, "newDB");
 $sqlo = "CREATE TABLE IF NOT EXISTS users (
   user_id INT AUTO_INCREMENT NOT NULL,
-  name varchar(255) NOT NULL,
+  name varchar(255) NOT NULL UNIQUE,
   password varchar(255) NOT NULL,
   primary key (user_id)
   )";
@@ -61,9 +61,10 @@ if (mysqli_query($conn_full, $sql_insert)) {
   echo "</br> Inserted data succesfully";
 } else {
   echo "Error in sql: " . mysqli_error($conn);
+  //should add here instead comment that users already exists
 }
 
- //$sql_test = "TRUNCATE TABLE users;";
+// $sql_test = "DROP TABLE users;";
 // mysqli_query($conn_full, $sql_test);
 
 

@@ -22,7 +22,7 @@ echo "Conected successfully";
 
 // Creating databases and making first query
 
-$sql = "CREATE DATABASE IF NOT EXISTS newDB";
+$sql = "CREATE DATABASE IF NOT EXISTS projektDB";
 
 if (mysqli_query($conn, $sql)) {
   echo "Query nice nice, DB created";
@@ -30,10 +30,13 @@ if (mysqli_query($conn, $sql)) {
   echo "Error during creation, following error occured: " . mysqli_error($conn);
 }
 
-$conn_full = mysqli_connect($servername, $username, $password, "newDB");
-$sqlo = "CREATE TABLE IF NOT EXISTS users (
+$conn_full = mysqli_connect($servername, $username, $password, "projektDB");
+
+$sqlo = "CREATE TABLE IF NOT EXISTS users(
   user_id INT AUTO_INCREMENT NOT NULL,
-  name varchar(255) NOT NULL UNIQUE,
+  username varchar(255) NOT NULL UNIQUE,
+  fullname varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
   password varchar(255) NOT NULL,
   primary key (user_id)
   )";
@@ -45,14 +48,17 @@ if (mysqli_query($conn_full, $sqlo)) {
   echo "Error in sql: " . mysqli_error($conn);
 }
 
-$guestname = $_POST["username"];
-$guestpassword =  $_POST["password"];
+$guestname = $_POST["registerName"];
+$guestusername =  $_POST["registerUsername"];
+$guestpassword =  $_POST["registerPassword"];
+$guestemail =  $_POST["registerEmail"];
+
 
 //Inserting data
  
-$sql_insert = "INSERT INTO users(name, password)
+$sql_insert = "INSERT INTO users(fullname,username,password,email)
 VALUES
-('$guestname', '$guestpassword')
+('$guestname', '$guestusername', '$guestpassword', '$guestemail')
 ";
 
 

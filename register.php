@@ -40,7 +40,9 @@ include_once 'header.php';
             <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
         </form>
     </div>
-
+    <?php 
+echo $_SESSION['message'];
+?>
 </div>
 
 

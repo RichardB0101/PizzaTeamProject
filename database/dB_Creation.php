@@ -61,10 +61,21 @@ VALUES
 ('$guestname', '$guestusername', '$guestpassword', '$guestemail')
 ";
 
+$check_user = mysqli_query($conn_full, "SELECT * FROM users WHERE username =  '$guestusername'");
+if(mysqli_num_rows($check_user) > 0){
+  $_SESSION['message'] = '<br><p>USER ALREADY EXISTS!</p>';
+  header('Location: register.php');
+ }
+
 
 // Checking if inserted sucesfully 
 if (mysqli_query($conn_full, $sql_insert)) {
   echo "</br> Inserted data succesfully";
+
+
+
+
+
 } else {
   echo "Error in sql: " . mysqli_error($conn);
   //should add here instead comment that users already exists
@@ -74,7 +85,16 @@ if (mysqli_query($conn_full, $sql_insert)) {
 // mysqli_query($conn_full, $sql_test);
 
 
+
+
+
+
+
+
+
 mysqli_close($conn);
+
+
 
 
 

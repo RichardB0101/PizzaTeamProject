@@ -1,11 +1,12 @@
 <?php 
-//This code should execute on first website startup if user never had database and table before.
+//This file is responsible for creating dabase and tables. It was made to save teachers time when checking our projects :) so he doesn't need to manually create tables and databases
 
 // DataBase login credentials
 
 $servername = "localhost";
 $username = "lab";
 $password = "123";
+$database = "projektDB";
 
 // Create connection
 
@@ -16,19 +17,20 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  echo "Conected successfully";
+  
   
   // Creating databases and making first query
   
   $sql = "CREATE DATABASE IF NOT EXISTS projektDB";
   
   if (mysqli_query($conn, $sql)) {
-    echo "Query nice nice, DB created";
+    
   } else {
     echo "Error during creation, following error occured: " . mysqli_error($conn);
   }
+
+  require_once "dB_Connection.php";
   
-  $conn_full = mysqli_connect($servername, $username, $password, "projektDB");
   
   $sqlo = "CREATE TABLE IF NOT EXISTS users(
     user_id INT AUTO_INCREMENT NOT NULL,
@@ -38,3 +40,9 @@ if (!$conn) {
     password varchar(255) NOT NULL,
     primary key (user_id)
     )";
+
+if (mysqli_query($conn_full, $sqlo)) {
+    
+  } else {
+    echo "Error during creation, following error occured: " . mysqli_error($conn);
+  }

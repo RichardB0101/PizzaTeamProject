@@ -8,7 +8,7 @@ function component($prod_name, $prod_price, $prod_img, $prod_desc)
             <form action="" method="POST">
                 <div class="card shadow">
                     <div>
-                        <img src="img/' . $prod_img . '.png" alt="pizza1" class="img-fluid card-img-top">
+                        <img src="img/' . $prod_img . '.png" alt="pizza1" class="img-fluid grow card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">' . $prod_name . ' 30cm</h5>

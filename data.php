@@ -9,7 +9,7 @@ include_once 'header.php';
 <h3>Database data test:</h3>
 
 <?php
-include_once 'database/dB_Handler.php';
+include_once 'database\dB_Connection.php';
 
 // Sql query to select users data
 $sql="SELECT username, password FROM users";

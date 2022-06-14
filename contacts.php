@@ -13,15 +13,15 @@ include_once 'header.php';
         <h4 class="text-start">Where to find us?</h4>
 
         <ul class="list-group">
-            <li class="list-group-item">Adress: Mindaugo g. 11, PC "Maxima", Vilnius
+            <li class="list-group-item">Adress: <a href="https://www.google.com/maps?q=Mindaugo+g.+11,+PC+%22Maxima%22&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjX9Mqp3K34AhU2CRAIHRDfABsQ_AUoAXoECAIQAw">Mindaugo g. 11, PC "Maxima", Vilnius</a>
                 Telefonas: +370 659 32584</li>
-            <li class="list-group-item">Adress: Liepkalnio g. 112 PC "Maxima", Vilnius
+            <li class="list-group-item">Adress: <a href="https://www.google.com/maps/search/Liepkalnio+g.+112+PC+%22Maxima%22/@54.6533382,25.3019923,17z/data=!3m1!4b1">Liepkalnio g. 112 PC "Maxima", Vilnius</a>
                 Telefonas: +37065921473</li>
-            <li class="list-group-item">Adress: Gedimino pr. 26, Vilnius
+            <li class="list-group-item">Adress: <a href="https://www.google.com/maps?q=Gedimino+pr.+26,+Vilnius&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiG7pqY3a34AhWFy4sKHZeBAB4Q_AUoAXoECAEQAw">Gedimino pr. 26, Vilnius</a>
                 Telefonas: +370 659 90414</li>
-            <li class="list-group-item">Adress: Upės g. 9, "PC CUP"
+            <li class="list-group-item">Adress: <a href="https://www.google.com/maps?q=Up%C4%97s+g.+9,+%22PC+CUP%22&um=1&ie=UTF-8&sa=X&ved=2ahUKEwirt_er3a34AhWI6CoKHb79B7kQ_AUoAXoECAIQAw">Upės g. 9, "PC CUP"</a>
                 Telefonas: +370 659 20737</li>
-            <li class="list-group-item">Adress: Saulėtekio al.9, Vilnius
+            <li class="list-group-item">Adress: <a href="https://www.google.com/maps?q=Saul%C4%97tekio+al.9,+Vilnius&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjtq7u-3a34AhVFEncKHbKIBhAQ_AUoAXoECAIQAw">Saulėtekio al.9, Vilnius</a>
                 Telefonas: +370 659 63424</li>
         </ul>
     </div>

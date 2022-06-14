@@ -26,6 +26,8 @@ include_once 'header.php';
         </ul>
     </div>
 
+    <div class="mt-5 ml-5 mb-5"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9218.58175755929!2d25.287803!3d54.7158609!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb172bdf33c02605!2sBranch%20of%20the%20University%20of%20Bia%C5%82ystok!5e0!3m2!1sen!2slt!4v1655213858488!5m2!1sen!2slt" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
     </div>
 
     <?php

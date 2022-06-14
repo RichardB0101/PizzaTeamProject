@@ -18,11 +18,11 @@ session_start();
         html,
         body {
             /* added this snippet of code as a solution to white gap appearing on the very right side of screen */
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
+
             overflow-x: hidden;
+    min-height: 75rem;
+    padding-top: 4.5rem;
+
         }
     </style>
 </head>

@@ -7,7 +7,7 @@ session_start();
 // DataBase login credentials
 
 $servername = "localhost";
-$username = "root";
+$username = "lab";
 $password = "123";
 
 // Create connection
@@ -66,10 +66,10 @@ VALUES
 $check_user = mysqli_query($conn_full, "SELECT * FROM users WHERE username =  '$guestusername'");
 if(mysqli_num_rows($check_user) > 0){
   $_SESSION['message'] = '<br><p>USER ALREADY EXISTS!</p>';
-  header('Location: register.php');
+  header('Location: ../register.php');
  }
  else{
-  header('Location: data.php');
+  header('Location: ../data.php');
  }
 
 // Sql query to select users data
@@ -103,15 +103,15 @@ if (mysqli_query($conn_full, $sql_insert)) {
 // mysqli_query($conn_full, $sql_test);
 
 // Sql query to select users data
-$sql="SELECT username, password FROM users";
+//$sql="SELECT username, password FROM users";
 
 // Making query
-$result = mysqli_query($conn_full, $sql);
+//$result = mysqli_query($conn_full, $sql);
 
 // Trying to fetch data from Database as an array
-$data = mysqli_fetch_assoc($result);
+//$data = mysqli_fetch_assoc($result);
 
-print_r($data);
+//print_r($data);
 
 
 

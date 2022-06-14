@@ -20,8 +20,7 @@ session_start();
             /* added this snippet of code as a solution to white gap appearing on the very right side of screen */
 
             overflow-x: hidden;
-    min-height: 75rem;
-    padding-top: 4.5rem;
+
 
         }
     </style>

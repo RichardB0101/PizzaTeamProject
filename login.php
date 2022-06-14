@@ -35,11 +35,11 @@ $loginPassword = $_POST["loginPassword"];
 
 $check_user = mysqli_query($conn_full, "SELECT * FROM users WHERE username =  '$loginUsername' AND password = '$loginPassword'");
 
-if (mysqli_num_rows($check_user) > 1) {
+if (mysqli_num_rows($check_user)  < 0) {
     $_SESSION['message2'] = '<br><p>WRONG USERNAME OR PASSWORD!</p>';
     header('Location: login.php');
 } else {
-    header('Location: loggedin.php');
+    //header('Location: loggedin.php');
 $sql="SELECT username, password, user_id FROM users WHERE username =  '$loginUsername' AND password = '$loginPassword'";
 $result = mysqli_query($conn_full, $sql);
 $data = mysqli_fetch_assoc($result);

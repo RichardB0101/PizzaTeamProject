@@ -1,2 +1,4 @@
 <?php 
-$check_user = 0;
+session_start();
+unset($_SESSION['user']);
+header("Location: login.php");

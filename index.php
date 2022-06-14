@@ -1,28 +1,36 @@
 <?php
 include_once 'header.php';
 include_once 'database\dB_Fresh.php';
+include_once 'assets/pizzaBuilder.php';
 ?>
 
 
+<div class="container">
 
-<div>
-  <h2 class="mt-5 text-center mb-5">Pizza</h2>
-  <!-- used "mx-auto" to align items horizontally -->
-  <div class="container w-100">
-    <div id="pizza-menu1" class="row mb-5">
-      <img class="col-4 d-flex justify-content-centers" src="img/astrioji NEW.png" alt="pizza basilica">
-      <img class="col-4 d-flex justify-content-centers" src="img/grybu NEW.png" alt="pizza basilica">
-      <img class="col-4 d-flex justify-content-centers" src="img/4 sezonu NEW.png" alt="pizza basilica">
+    <div class="row text-center pt-5 justify-content-center">
+
+        <?php
+        component("Pepperoni", "9", "pepperoni NEW", $pepperoni_desc);
+        component("Meksikietiška", "9", "meksikietiska NEW", $meksikietiska_desc);
+        component("Kaimiška", "9", "kaimiška NEW", $kaimiska_desc);
+
+        ?>
+
     </div>
-    <div id="pizza-menu2" class="row mb-5">
-      <img class="col-4 d-flex justify-content-center mx-auto" src="img/kaimiška NEW.png" alt="pizza basilica" width="20%">
-      <img class="col-4 d-flex justify-content-center mx-auto" src="img/pepperoni NEW.png" alt="pizza basilica" width="20%">
-      <img class="col-4 d-flex justify-content-center mx-auto" src="img/meksikietiska NEW.png" alt="pizza basilica" width="20%">
+
+    <div class="row text-center py-4 justify-content-center">
+
+        <?php
+        component("Grybų", "9", "grybu NEW", $grybu_desc);
+        component("Aštrioji", "9", "astrioji NEW", $astrioji_desc);
+        component("4 Sezonų", "9", "4 sezonu NEW", $fourSeasons_desc);
+        ?>
+
     </div>
-  </div>
 </div>
 
-</br>
+
+
 <?php
 include_once 'footer.php';
 ?>

@@ -17,14 +17,16 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Font awesome library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         html,
         body {
             /* added this snippet of code as a solution to white gap appearing on the very right side of screen */
-
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
             overflow-x: hidden;
-
-
         }
     </style>
 </head>
@@ -51,11 +53,14 @@ session_start();
             </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="ml-1 nav-item">
                 <a class="nav-link btn btn-primary mr-1" href="login.php">Login</a>
             </li>
-            <li class="nav-item">
+            <li class="ml-1 nav-item">
                 <a class="nav-link btn btn-primary" href="register.php">Register</a>
+            </li>
+            <li class="ml-2 nav-item">
+                <a class="nav-link btn btn-primary" href="register.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
         </ul>
 

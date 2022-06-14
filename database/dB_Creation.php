@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // This is procedural way of establishing connection with database, whole point of this program is to practice a bit of queries along with PHP
 
 
@@ -54,7 +56,7 @@ $guestpassword =  $_POST["registerPassword"];
 $guestemail =  $_POST["registerEmail"];
 
 
-//Inserting data
+// Inserting data
  
 $sql_insert = "INSERT INTO users(fullname,username,password,email)
 VALUES
@@ -66,24 +68,50 @@ if(mysqli_num_rows($check_user) > 0){
   $_SESSION['message'] = '<br><p>USER ALREADY EXISTS!</p>';
   header('Location: register.php');
  }
+ else{
+  header('Location: data.php');
+ }
+
+// Sql query to select users data
+$sql="SELECT username, password, user_id FROM users";
+
+// Making query
+$result = mysqli_query($conn_full, $sql);
+
+// Trying to fetch data from Database as an array
+$data = mysqli_fetch_assoc($result);
+
+
+ $_SESSION['user'] = [
+  "id" => $data["user_id"],
+  "username" => $data["username"],
+  "password" => $data["password"]
+ ];
 
 
 // Checking if inserted sucesfully 
 if (mysqli_query($conn_full, $sql_insert)) {
   echo "</br> Inserted data succesfully";
-
-
-
-
-
 } else {
   echo "Error in sql: " . mysqli_error($conn);
   //should add here instead comment that users already exists
 }
 
+
+
 // $sql_test = "DROP TABLE users;";
 // mysqli_query($conn_full, $sql_test);
 
+// Sql query to select users data
+$sql="SELECT username, password FROM users";
+
+// Making query
+$result = mysqli_query($conn_full, $sql);
+
+// Trying to fetch data from Database as an array
+$data = mysqli_fetch_assoc($result);
+
+print_r($data);
 
 
 
@@ -91,8 +119,6 @@ if (mysqli_query($conn_full, $sql_insert)) {
 
 
 
-
-mysqli_close($conn);
 
 
 

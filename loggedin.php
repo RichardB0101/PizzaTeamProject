@@ -1,17 +1,12 @@
 <?php
 include_once 'header.php';
+
+
+echo "<h2>Your username is: " . $_SESSION["user"]["username"] . "</h2></br>";
+echo "<h2>Your password is: " . $_SESSION["user"]["password"] . "</h2></br>";
+echo "test";
 ?>
-
-
-</br>Welcome, <?php echo $_POST["registerName"]; ?><br>
-Your username is: <?php echo $_POST["registerUsername"]; ?></br>
-Your password is: <?php echo $_POST["registerPassword"]; ?></br>
-Your email is: <?php echo $_POST["registerEmail"]; ?></br>
-
-<?php
-include_once 'database/dB_Creation.php';
-    ?>
-
+<a href="uncheckUser.php" class="btn btn-danger mr-1">Logout</a>
     <?php
     include_once 'footer.php';
     ?>

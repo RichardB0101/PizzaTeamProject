@@ -22,6 +22,7 @@ include_once 'database\dB_Fresh.php';
   </div>
 </div>
 
+</br>
 <?php
 include_once 'footer.php';
 ?>

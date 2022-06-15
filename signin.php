@@ -15,10 +15,10 @@ if (isset($_POST['loginUsername']) && isset($_POST['loginPassword'])) {
 	$pass = validate($_POST['loginPassword']);
 
 	if (empty($uname)) {
-		header("Location: index.php?error=User Name is required");
+		header("Location: login.php?error=User Name is required");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: index.php?error=Password is required");
+        header("Location: login.php?error=Password is required");
 	    exit();
 	}else{
 		$sql = "SELECT * FROM users WHERE username='$uname' AND password='$pass'";
@@ -30,20 +30,20 @@ if (isset($_POST['loginUsername']) && isset($_POST['loginPassword'])) {
             if ($row['username'] === $uname && $row['password'] === $pass) {
             	$_SESSION['username'] = $row['username'];
             	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location: career.php");
+            	$_SESSION['id'] = $row['user_id'];
+            	header("Location: profile.php");
 		        exit();
             }else{
-				header("Location: index.php?error=Incorect Username or password");
+				header("Location: login.php?error=Incorect Username or password");
 		        exit();
 			}
 		}else{
-			header("Location: index.php?error=Incorect Username or password");
+			header("Location: login.php?error=Incorect Username or password");
 	        exit();
 		}
 	}
 	
 }else{
-	header("Location: index.php");
+	header("Location: login.php");
 	exit();
 }

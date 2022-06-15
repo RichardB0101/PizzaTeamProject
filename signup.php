@@ -38,28 +38,23 @@ if (isset($_POST['registerUsername']) && isset($_POST['registerPassword']) && is
         VALUES
         ('$name', '$uname', '$pass', '$email')
         ";
+        $sqlSelect = "SELECT * FROM users WHERE username='$uname' AND password='$pass'";
 
-		$result = mysqli_query($conn_full, $sql);
+		
+		$resultNew = mysqli_query($conn_full, $sqlSelect);
 
-		if (mysqli_num_rows($result) === 0) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['username'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['username'] = $row['username'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location: profile.php");
-		        exit();
-            }else{
-				header("Location: index.php?error=Incorect Username or password");
-		        exit();
-			}
+		if (mysqli_num_rows($resultNew) === 0) {
+            $result = mysqli_query($conn_full, $sql);
+            header("Location: login.php");
+		    exit();
+            
 		}else{
-			header("Location: index.php?error=Incorect Username or password");
+			header("Location: register.php?error=Username taken");
 	        exit();
 		}
-	}
-	
-}else{
+    }
+    }
+else{
 	header("Location: index.php");
 	exit();
 }

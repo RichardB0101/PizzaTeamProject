@@ -1,6 +1,5 @@
 <?php
 include_once 'header.php';
-include_once '\database\dB_Creation';
 ?>
 
 
@@ -8,12 +7,12 @@ include_once '\database\dB_Creation';
 
     <!-- Pills content -->
     <div class="tab-content">
-        <form action="loggedin.php" method="post">
+        <form action="signup.php" method="POST">
             <h2 class="text-center mt-5 mb-5">Register</h2>
             <!-- Name input -->
             <div class="form-outline mb-4">
                 <input name="registerName" type="text" id="registerName" class="form-control" required />
-                <label class="form-label" for="registerName">Name</label>
+                <label class="form-label" for="registerName">Full Name</label>
             </div>
 
             <!-- Username input -->
@@ -38,12 +37,9 @@ include_once '\database\dB_Creation';
 
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-block mb-3">Sign up</button>
         </form>
     </div>
-    <?php 
-echo $_SESSION['message'];
-?>
 </div>
 
 

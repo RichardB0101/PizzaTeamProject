@@ -38,7 +38,8 @@ if (!$conn) {
     fullname varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
-    primary key (user_id)
+    primary key (user_id),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )";
 
 if (mysqli_query($conn_full, $sqlo)) {

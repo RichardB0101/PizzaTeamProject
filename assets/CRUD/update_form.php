@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("../../database/dB_Connection.php");
-$my_id = $_POST['update_id'];
+$my_id = $_GET['update_id'];
 $_SESSION['identificator'] = $my_id;
 
 $read = mysqli_query($conn_full, "SELECT * FROM `users` WHERE `user_id` = $my_id");
@@ -9,7 +9,7 @@ $temporary = mysqli_fetch_assoc($read);
 $temp_fullname = $temporary['fullname'];
 $temp_username = $temporary['username'];
 $temp_email = $temporary['email'];
-$temp_password = $temporary['product_password'];
+$temp_password = $temporary['password'];
 
 
 ?>

@@ -11,9 +11,9 @@ $my_password = $_POST['update_password'];
 
 
 
-if (isset($_POST['update_name']) && isset($_POST['update_desc']) && isset($my_id)) {
+if (isset($_POST['update_username']) && isset($_POST['update_fullname']) && isset($_POST['update_email']) && isset($_POST['update_password']) && isset($my_id)) {
 
-    $sql = mysqli_query($conn_full, "UPDATE `users` SET `username`= '$my_username',`fullname`='$my_fullname',`email`='$my_email' ,`password`='$my_password'  WHERE `product_id`=$my_id");
+    $sql = mysqli_query($conn_full, "UPDATE `users` SET `username`= '$my_username',`fullname`='$my_fullname',`email`='$my_email' ,`password`='$my_password'  WHERE `user_id`=$my_id");
     header("Location: ../../admin.php");
     unset($_SESSION['identificator']);
     exit();

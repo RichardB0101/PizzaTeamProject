@@ -36,11 +36,11 @@
                 <td>" . $rows['fullname'] . "</td>
                 <td>" . $rows['email'] . "</td>
                 <td>" . $rows['password'] . "</td>
-                <form action='update_form.php' method='GET'>
+                <form action='assets/CRUD/update_form.php' method='GET'>
                 <input type='hidden' name='update_id' value=" . $rows['user_id'] . " />
                 <td><button type='submit' class='btn btn-primary'>Edit</button></td>
                 </form>
-                <form action='delete.php' method='GET'>
+                <form action='assets/CRUD/delete.php' method='GET'>
                 <input type='hidden' name='del_id' value=" . $rows['user_id'] . " />
                 <td><button type='submit' class='btn btn-danger'>Delete</button></td>
                 </form>

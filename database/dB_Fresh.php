@@ -1,48 +1,44 @@
 <?php 
 //This file is responsible for creating dabase and tables. It was made to save teachers time when checking our projects :) so he doesn't need to manually create tables and databases
 
-// DataBase login credentials
-
-$servername = "localhost";
-$username = "lab";
-$password = "123";
-$database = "projektDB";
-
-// Create connection
-
-$conn = mysqli_connect($servername, $username, $password);
-
-// Checking for connection
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-  }
-  
-  
+require_once "dB_Connection.php";
   // Creating databases and making first query
   
-  $sql = "CREATE DATABASE IF NOT EXISTS projektDB";
+  $sql = "CREATE DATABASE IF NOT EXISTS projektdb";
   
-  if (mysqli_query($conn, $sql)) {
+  if (mysqli_query($conn_full, $sql)) {
     
   } else {
     echo "Error during creation, following error occured: " . mysqli_error($conn);
   }
 
-  require_once "dB_Connection.php";
   
   
-  $sqlo = "CREATE TABLE IF NOT EXISTS users(
-    user_id INT AUTO_INCREMENT NOT NULL,
-    username varchar(255) NOT NULL UNIQUE,
-    fullname varchar(255) NOT NULL,
-    email varchar(255) NOT NULL,
-    password varchar(255) NOT NULL,
-    primary key (user_id),
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )";
+  $sql = "CREATE TABLE IF NOT EXISTS `users` (
+    `user_id` int(11) NOT NULL AUTO_INCREMENT,
+    `username` varchar(255) NOT NULL,
+    `fullname` varchar(255) NOT NULL,
+    `email` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    PRIMARY KEY(`user_id`)
+  )";
+$query = mysqli_query($conn_full, $sql);
 
-if (mysqli_query($conn_full, $sqlo)) {
+$sql = "CREATE TABLE IF NOT EXISTS `pizzas` (
+  `pizza_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `img` varchar(255) NOT NULL,
+  PRIMARY KEY (`pizza_id`)
+)";
+$query = mysqli_query($conn_full, $sql);
+
+
+
+
+
+if (mysqli_query($conn_full, $sql)) {
     
   } else {
     echo "Error during creation, following error occured: " . mysqli_error($conn);

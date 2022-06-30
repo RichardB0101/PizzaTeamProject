@@ -91,7 +91,7 @@ session_start();
                     <?php }?>
 
                 <li class="ml-2 nav-item">
-                    <a class="nav-link btn btn-primary" href="register.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a class="nav-link btn btn-primary" href="cart.php"><i class="fa-solid fa-cart-shopping"><span class="mx-3">0</span></i></a>
                 </li>
 
 

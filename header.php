@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,15 +63,40 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="ml-1 nav-item">
-                    <a class="nav-link btn btn-primary mr-1" href="login.php">Login</a>
-                </li>
-                <li class="ml-1 nav-item">
-                    <a class="nav-link btn btn-primary" href="register.php">Register</a>
-                </li>
+
+
+
+
+                <?php if (!isset($_SESSION['username'])) { ?>
+
+                    <li class="ml-1 nav-item">
+                        <a class="nav-link btn btn-primary mr-1" href="login.php">Login</a>
+                    </li>
+
+
+                    <li class="ml-1 nav-item">
+                        <a class="nav-link btn btn-primary" href="register.php">Register</a>
+                    </li>
+
+                <?php }else if (isset($_SESSION['username'])){?>
+
+                    <li class="ml-1 nav-item">
+                        <a class="nav-link btn btn-primary mr-1" href="profile.php">My profile</a>
+                    </li>
+
+
+                    <li class="ml-1 nav-item">
+                        <a class="nav-link btn btn-danger" href="logout.php">Logout</i></a>
+                    </li>
+                    <?php }?>
+
                 <li class="ml-2 nav-item">
                     <a class="nav-link btn btn-primary" href="register.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
+
+
+
+
             </ul>
 
         </div>

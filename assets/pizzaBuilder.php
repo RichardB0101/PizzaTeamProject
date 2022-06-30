@@ -26,6 +26,7 @@ function component($prod_name, $prod_price, $prod_img, $prod_desc)
             </form>
         </div>
     ';
+    //$sql = mysqli_query($conn_full, "INSERT INTO `pizzas`(`name`, `price`, `description`, `img`) VALUES ('$prod_name','$prod_price', '$prod_desc', '$prod_img')");
     echo $element;
 }
 

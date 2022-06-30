@@ -8,10 +8,10 @@ require_once 'database/dB_Connection.php';
             <table class="table text-light bg-dark">
                 <tr>
                     <th>User_ID</th>
-                    <th>Fullname</th>
                     <th>Username</th>
-                    <th>Password</th>
+                    <th>Fullname</th>
                     <th>Email</th>
+                    <th>Password</th>
                     
                 </tr>
                 <?php
@@ -51,6 +51,10 @@ require_once 'database/dB_Connection.php';
             <form action="assets/CRUD/delete_all.php" class="form ms-5" method="POST">
                 <button type="submit" class="btn btn-danger">Clear all database records</button>
             </form>
+            <form action="assets/CRUD/unsetCart.php" class="form ms-5" method="POST">
+                <button type="submit" class="btn btn-danger">Clear shopping cart</button>
+            </form>
+
 
         </div>
 

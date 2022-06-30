@@ -18,6 +18,7 @@ if (isset($_POST['registerUsername']) && isset($_POST['registerPassword']) && is
 
 	$uname = validate($_POST['registerUsername']);
 	$pass = validate($_POST['registerPassword']);
+	$pass_hashed = password_hash($pass , PASSWORD_DEFAULT);
 	$name = validate_name($_POST['registerName']);
 	$email = validate($_POST['registerEmail']);
 
@@ -36,9 +37,9 @@ if (isset($_POST['registerUsername']) && isset($_POST['registerPassword']) && is
 	}else{
 		$sql = "INSERT INTO users(fullname,username,password,email)
         VALUES
-        ('$name', '$uname', '$pass', '$email')
+        ('$name', '$uname', '$pass_hashed', '$email')
         ";
-        $sqlSelect = "SELECT * FROM users WHERE username='$uname' AND password='$pass'";
+        $sqlSelect = "SELECT * FROM users WHERE username='$uname' AND password='$pass_hashed'";
 
 		
 		$resultNew = mysqli_query($conn_full, $sqlSelect);

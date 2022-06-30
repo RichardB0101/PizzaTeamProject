@@ -23,7 +23,7 @@ function component($prod_id ,$prod_name, $prod_price, $prod_img, $prod_desc)
                         <input type="hidden" name="p_name" value='. $prod_name .'>
                         <input type="hidden" name="p_price" value='. $prod_price .'>
                         <button type="submit" name="add" class="btn btn-warning my-3">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                        <input type="number" name="p_count" placeholder="0" min="0" max="50">
+                        <input type="number" name="p_count" placeholder="0" min="1" max="50">
                     </div>
                 </div>
             </form>

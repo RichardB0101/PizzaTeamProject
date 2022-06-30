@@ -17,12 +17,12 @@ SHOW DATABASES;
 --
 
 INSERT INTO `pizzas` (`pizza_id`, `name`, `price`, `description`, `img`) VALUES
-(1, 'Pepperoni', '9', 'Peperoni dešra, mocarela, rūkytas lydytas sūris, saulėje džiovintų pomidorų padažas, svogūnū traškučiai, gražgarstės, aliejaus ir česnakų padažas, raudonėliai. \r\n', 'pepperoni NEW'),
-(2, 'Meksikietiška', '9', 'Malta mėsa, mocarela, svogūnai, juodosios alyvuogės, konservuotos paprikos, konservuoti jalapeno pipirai, saldžiaaštris padažas', 'meksikietiska NEW'),
-(3, 'Kaimiška', '9', 'Šoninė, mocarela, svogūnai, konservuoti agurkai, krapai, kepta vištiena, mocarela, vyšniniai pomidorai, agurkai, paprikai, pievagrybiai', 'kaimiška NEW'),
-(4, 'Grybų', '9', 'Kepta vištiena, kumpis, mocarela, konservuoti agurkai, konservuotos paprikos, česnakinis padažas, pievagrybiai, kelmučiai', 'grybu NEW'),
-(5, 'Aštrioji', '9', 'Malta mėsa, plėšyta kiauliena, mocarela, pievagrybiai, konservuoti jalapeno pipirai, svogūnai, aštrūs raudonieji pipirai, chipotle padažas', 'astrioji NEW'),
-(6, '4 Sezonų', '9', 'Pepperoni, kepta vištiena, mocarela, konservuoti ananasai, pievagrybiai, vyšniniai pomidorai, špinatai, juodosios alyvuogės', '4 sezonu NEW');
+(1, 'Pepperoni', '9', 'Peperoni dešra, mocarela, rūkytas lydytas sūris, saulėje džiovintų pomidorų padažas, svogūnū traškučiai, gražgarstės, aliejaus ir česnakų padažas, raudonėliai. \r\n', 'img/pepperoni NEW.png'),
+(2, 'Meksikietiška', '9', 'Malta mėsa, mocarela, svogūnai, juodosios alyvuogės, konservuotos paprikos, konservuoti jalapeno pipirai, saldžiaaštris padažas', 'img/meksikietiska NEW.png'),
+(3, 'Kaimiška', '9', 'Šoninė, mocarela, svogūnai, konservuoti agurkai, krapai, kepta vištiena, mocarela, vyšniniai pomidorai, agurkai, paprikai, pievagrybiai', 'img/kaimiška NEW.png'),
+(4, 'Grybų', '9', 'Kepta vištiena, kumpis, mocarela, konservuoti agurkai, konservuotos paprikos, česnakinis padažas, pievagrybiai, kelmučiai', 'img/grybu NEW.png'),
+(5, 'Aštrioji', '9', 'Malta mėsa, plėšyta kiauliena, mocarela, pievagrybiai, konservuoti jalapeno pipirai, svogūnai, aštrūs raudonieji pipirai, chipotle padažas', 'img/astrioji NEW.png'),
+(6, '4 Sezonų', '9', 'Pepperoni, kepta vištiena, mocarela, konservuoti ananasai, pievagrybiai, vyšniniai pomidorai, špinatai, juodosios alyvuogės', 'img/4 sezonu NEW.png');
 
 
 --@block

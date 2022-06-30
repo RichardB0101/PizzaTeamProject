@@ -1,11 +1,11 @@
 <?php
 
-function component($prod_name, $prod_price, $prod_img, $prod_desc)
+function component($prod_id ,$prod_name, $prod_price, $prod_img, $prod_desc)
 {
     $element = '
     
         <div class="col-md-4 col-sm-6 my-3 my-md-3">
-            <form action="" method="POST">
+            <form action="index.php?id='.$prod_id.'" method="POST">
                 <div class="card shadow">
                     <div>
                         <img src="img/' . $prod_img . '.png" alt="pizza1" class="img-fluid grow card-img-top">
@@ -19,8 +19,11 @@ function component($prod_name, $prod_price, $prod_img, $prod_desc)
                             <small><s class="text-secondary">12€</s></small>
                             <span>' . $prod_price . '€</span>
                         </h5>
+                        <input type="hidden" name="p_id" value='. $prod_id .'>
+                        <input type="hidden" name="p_name" value='. $prod_name .'>
+                        <input type="hidden" name="p_price" value='. $prod_price .'>
                         <button type="submit" name="add" class="btn btn-warning my-3">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                        <input type="number" name="pizzaCount" placeholder="0" min="0" max="50">
+                        <input type="number" name="p_count" placeholder="0" min="0" max="50">
                     </div>
                 </div>
             </form>

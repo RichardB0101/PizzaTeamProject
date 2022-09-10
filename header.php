@@ -93,7 +93,12 @@ session_start();
                 <li class="ml-2 nav-item">
                     <a class="nav-link btn btn-primary" href="cart.php"><i class="fa-solid fa-cart-shopping"><span class="mx-3"><?php if(isset($_SESSION['cart'])){$num = count($_SESSION['cart']); echo $num+1;} else{echo 0;}?></span></i></a>
                 </li>
-
+                <?php if(!empty($_SESSION['cart'])):?>
+                <li class="ml-2 nav-item">
+                    <a class="nav-link btn btn-danger" href="clearingCart.php"><i class="fa-solid fa-trash"></i></a>
+                </li>
+                <?php endif; ?>
+                
 
 
 

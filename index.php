@@ -5,7 +5,7 @@ include_once 'assets/pizzaBuilder.php';
 
 
 if  (isset($_POST['add'])){
-    
+
 
         $session_array = array(
             'id' => $_GET['id'],
@@ -13,6 +13,10 @@ if  (isset($_POST['add'])){
             "price" => $_POST['p_price'],
             "quantity" => $_POST['p_count'],
         );
+        //Some backup plan to prevent people from submitting null value :)
+        if(empty($session_array['quantity'])){
+            $session_array['quantity'] = 1;
+        }
 
         $_SESSION['cart'][] = $session_array;
     
@@ -45,7 +49,14 @@ if  (isset($_POST['add'])){
     </div>
 </div>
 <pre>
-<?php print_r($_SESSION['cart']);?>
+<?php
+
+if(!empty($_SESSION['cart'])){
+    print_r($_SESSION['cart']);
+}
+
+
+?>
 </pre>
 
 <?php

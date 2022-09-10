@@ -26,15 +26,14 @@ include_once 'header.php';
 
                     foreach ($_SESSION['cart'] as $cart) {
                         $oneRowTotal = $cart["price"] * $cart["quantity"];
-                        $cartId += 1;
                         echo "<tr>";
-                        echo "<td>" . $cartId . "</td>";
+                        echo "<td>" . ++$cartId . "</td>";
                         echo "<td>" . $cart["name"] . "</td>";
                         echo "<td>" . $oneRowTotal . "$</td>";
                         echo "<td>x" . $cart["quantity"] . "</td>";
                         print '<td>
                         <form action="delCartItem.php" method=GET>
-                        <input type="hidden" name="update_id" value="' . $cartId . '" />
+                        <input type="hidden" name="cartItem_del_id" value="' . $cartId . '" />
                         <button type="submit" class="btn btn-danger">Remove item</button>
                         </form>
                         

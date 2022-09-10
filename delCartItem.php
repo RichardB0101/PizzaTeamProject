@@ -1,7 +1,10 @@
 <?php 
 session_start();
 
-$cartItemId = $_GET[''];
+$cartItemId = 1 - ($_GET['cartItem_del_id']);
+
+unset($_SESSION['cart'][$cartItemId]);
+
 
 header("Location: cart.php");
 exit();

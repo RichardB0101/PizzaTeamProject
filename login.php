@@ -27,6 +27,7 @@ include_once 'header.php';
 
 
         </form>
+        <p class="text-muted">Login form is case sensitive</p>
     </div>
 </div>
 

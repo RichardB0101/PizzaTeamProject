@@ -61,6 +61,9 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="contacts.php">Contacts</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin panel (for the sake of example)</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
 

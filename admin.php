@@ -39,7 +39,7 @@ require_once 'database/dB_Connection.php';
                 ?>
 
             </table>
-
+            <h5 class="text-danger">Note, that if you add use using this form, password will not be encrypted!</h5>    
             <h3>Add new user to database:</h3>
             <form action="assets/CRUD/create.php" class="form ms-5 w-25" method="POST">
                 <input name="form_fullname" type="text" placeholder="Enter fullname"><br>

@@ -52,6 +52,7 @@ if  (isset($_POST['add'])){
 <?php
 
 if(!empty($_SESSION['cart'])){
+    echo "<h2>For debbuging:</h2><br>";
     print_r($_SESSION['cart']);
 }
 

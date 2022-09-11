@@ -91,10 +91,10 @@ session_start();
                     <li class="ml-1 nav-item">
                         <a class="nav-link btn btn-danger" href="logout.php">Logout</i></a>
                     </li>
-                    <?php }?>
+                    <?php }$num=1;?>
 
                 <li class="ml-2 nav-item">
-                    <a class="nav-link btn btn-primary" href="cart.php"><i class="fa-solid fa-cart-shopping"><span class="mx-3"><?php if(isset($_SESSION['cart'])){$num = count($_SESSION['cart']); echo $num+1;} else{echo 0;}?></span></i></a>
+                    <a class="nav-link btn btn-primary" href="cart.php"><i class="fa-solid fa-cart-shopping"><span class="mx-3"><?php if(isset($_SESSION['cart'])){$num = count($_SESSION['cart']); echo $num;} else{echo 0;}?></span></i></a>
                 </li>
                 <?php if(!empty($_SESSION['cart'])):?>
                 <li class="ml-2 nav-item">

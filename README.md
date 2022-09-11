@@ -1,7 +1,10 @@
 # PizzaTeamProject
 Making simple e-commerce Pizza Shop. Main goal challenge of the work was to use no JavaScript when working with content, and not rely on PHP libraries or frameworks. 
-Tech stack used: HTML/CSS, Bootstrap5, MySQL, PHP8.
-Note: Project still has some flaws and can get refactored and polished, so when feeling like it I constantly come back to it and apply some of my new knowledge.
+#### Tech stack used: 
+HTML/CSS, Bootstrap5, MySQL, PHP8.
+
+#### Note: 
+Project still has some flaws and can get refactored and polished, so when feeling like it I constantly come back to it and apply some of my new knowledge.
 
 ## Main page:
 ![Screenshot_335](https://user-images.githubusercontent.com/86617931/189518361-b0e9917c-0fd3-4246-b034-0f31cf2b19e0.png)
